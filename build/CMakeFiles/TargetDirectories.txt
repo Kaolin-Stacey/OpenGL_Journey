@@ -1,0 +1,5 @@
+C:/Users/kaoli/Desktop/C++/OpenGL_Journey/build/CMakeFiles/OpenGL_Journey.dir
+C:/Users/kaoli/Desktop/C++/OpenGL_Journey/build/CMakeFiles/edit_cache.dir
+C:/Users/kaoli/Desktop/C++/OpenGL_Journey/build/CMakeFiles/rebuild_cache.dir
+C:/Users/kaoli/Desktop/C++/OpenGL_Journey/build/external/GLM/CMakeFiles/edit_cache.dir
+C:/Users/kaoli/Desktop/C++/OpenGL_Journey/build/external/GLM/CMakeFiles/rebuild_cache.dir

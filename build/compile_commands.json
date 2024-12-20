@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/OpenGL_Journey.dir/includes_CXX.rsp -g -std=gnu++23 -g -o CMakeFiles\\OpenGL_Journey.dir\\src\\main.cpp.obj -c C:\\Users\\kaoli\\Desktop\\C++\\OpenGL_Journey\\src\\main.cpp",
+  "file": "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/main.cpp",
+  "output": "CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj"
+}
+]
