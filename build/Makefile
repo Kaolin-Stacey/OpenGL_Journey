@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\kaoli\Desktop\C++\OpenGL_Journey
+CMAKE_SOURCE_DIR = C:\Users\Kaolin\Work\OpenGL_Journey
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build
+CMAKE_BINARY_DIR = C:\Users\Kaolin\Work\OpenGL_Journey\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build\CMakeFiles C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Kaolin\Work\OpenGL_Journey\build\CMakeFiles C:\Users\Kaolin\Work\OpenGL_Journey\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Kaolin\Work\OpenGL_Journey\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,30 @@ src/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Journey.dir\build.make CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.s
 .PHONY : src/Shader.cpp.s
 
+src/Window.obj: src/Window.cpp.obj
+.PHONY : src/Window.obj
+
+# target to build an object file
+src/Window.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Journey.dir\build.make CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.obj
+.PHONY : src/Window.cpp.obj
+
+src/Window.i: src/Window.cpp.i
+.PHONY : src/Window.i
+
+# target to preprocess a source file
+src/Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Journey.dir\build.make CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.i
+.PHONY : src/Window.cpp.i
+
+src/Window.s: src/Window.cpp.s
+.PHONY : src/Window.s
+
+# target to generate assembly for a file
+src/Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGL_Journey.dir\build.make CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.s
+.PHONY : src/Window.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -215,6 +239,9 @@ help:
 	@echo ... src/Shader.obj
 	@echo ... src/Shader.i
 	@echo ... src/Shader.s
+	@echo ... src/Window.obj
+	@echo ... src/Window.i
+	@echo ... src/Window.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

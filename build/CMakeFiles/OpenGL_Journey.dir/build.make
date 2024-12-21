@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\kaoli\Desktop\C++\OpenGL_Journey
+CMAKE_SOURCE_DIR = C:\Users\Kaolin\Work\OpenGL_Journey
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build
+CMAKE_BINARY_DIR = C:\Users\Kaolin\Work\OpenGL_Journey\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/OpenGL_Journey.dir/depend.make
@@ -73,53 +73,69 @@ CMakeFiles/OpenGL_Journey.dir/codegen:
 
 CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj: CMakeFiles/OpenGL_Journey.dir/flags.make
 CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj: CMakeFiles/OpenGL_Journey.dir/includes_CXX.rsp
-CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj: C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/Mesh.cpp
+CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj: C:/Users/Kaolin/Work/OpenGL_Journey/src/Mesh.cpp
 CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj: CMakeFiles/OpenGL_Journey.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj -MF CMakeFiles\OpenGL_Journey.dir\src\Mesh.cpp.obj.d -o CMakeFiles\OpenGL_Journey.dir\src\Mesh.cpp.obj -c C:\Users\kaoli\Desktop\C++\OpenGL_Journey\src\Mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Kaolin\Work\OpenGL_Journey\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj -MF CMakeFiles\OpenGL_Journey.dir\src\Mesh.cpp.obj.d -o CMakeFiles\OpenGL_Journey.dir\src\Mesh.cpp.obj -c C:\Users\Kaolin\Work\OpenGL_Journey\src\Mesh.cpp
 
 CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kaoli\Desktop\C++\OpenGL_Journey\src\Mesh.cpp > CMakeFiles\OpenGL_Journey.dir\src\Mesh.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Kaolin\Work\OpenGL_Journey\src\Mesh.cpp > CMakeFiles\OpenGL_Journey.dir\src\Mesh.cpp.i
 
 CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kaoli\Desktop\C++\OpenGL_Journey\src\Mesh.cpp -o CMakeFiles\OpenGL_Journey.dir\src\Mesh.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Kaolin\Work\OpenGL_Journey\src\Mesh.cpp -o CMakeFiles\OpenGL_Journey.dir\src\Mesh.cpp.s
 
 CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj: CMakeFiles/OpenGL_Journey.dir/flags.make
 CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj: CMakeFiles/OpenGL_Journey.dir/includes_CXX.rsp
-CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj: C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/Shader.cpp
+CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj: C:/Users/Kaolin/Work/OpenGL_Journey/src/Shader.cpp
 CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj: CMakeFiles/OpenGL_Journey.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj -MF CMakeFiles\OpenGL_Journey.dir\src\Shader.cpp.obj.d -o CMakeFiles\OpenGL_Journey.dir\src\Shader.cpp.obj -c C:\Users\kaoli\Desktop\C++\OpenGL_Journey\src\Shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Kaolin\Work\OpenGL_Journey\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj -MF CMakeFiles\OpenGL_Journey.dir\src\Shader.cpp.obj.d -o CMakeFiles\OpenGL_Journey.dir\src\Shader.cpp.obj -c C:\Users\Kaolin\Work\OpenGL_Journey\src\Shader.cpp
 
 CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kaoli\Desktop\C++\OpenGL_Journey\src\Shader.cpp > CMakeFiles\OpenGL_Journey.dir\src\Shader.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Kaolin\Work\OpenGL_Journey\src\Shader.cpp > CMakeFiles\OpenGL_Journey.dir\src\Shader.cpp.i
 
 CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kaoli\Desktop\C++\OpenGL_Journey\src\Shader.cpp -o CMakeFiles\OpenGL_Journey.dir\src\Shader.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Kaolin\Work\OpenGL_Journey\src\Shader.cpp -o CMakeFiles\OpenGL_Journey.dir\src\Shader.cpp.s
+
+CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.obj: CMakeFiles/OpenGL_Journey.dir/flags.make
+CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.obj: CMakeFiles/OpenGL_Journey.dir/includes_CXX.rsp
+CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.obj: C:/Users/Kaolin/Work/OpenGL_Journey/src/Window.cpp
+CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.obj: CMakeFiles/OpenGL_Journey.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Kaolin\Work\OpenGL_Journey\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.obj"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.obj -MF CMakeFiles\OpenGL_Journey.dir\src\Window.cpp.obj.d -o CMakeFiles\OpenGL_Journey.dir\src\Window.cpp.obj -c C:\Users\Kaolin\Work\OpenGL_Journey\src\Window.cpp
+
+CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Kaolin\Work\OpenGL_Journey\src\Window.cpp > CMakeFiles\OpenGL_Journey.dir\src\Window.cpp.i
+
+CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Kaolin\Work\OpenGL_Journey\src\Window.cpp -o CMakeFiles\OpenGL_Journey.dir\src\Window.cpp.s
 
 CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj: CMakeFiles/OpenGL_Journey.dir/flags.make
 CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj: CMakeFiles/OpenGL_Journey.dir/includes_CXX.rsp
-CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj: C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/main.cpp
+CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj: C:/Users/Kaolin/Work/OpenGL_Journey/src/main.cpp
 CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj: CMakeFiles/OpenGL_Journey.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj -MF CMakeFiles\OpenGL_Journey.dir\src\main.cpp.obj.d -o CMakeFiles\OpenGL_Journey.dir\src\main.cpp.obj -c C:\Users\kaoli\Desktop\C++\OpenGL_Journey\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Kaolin\Work\OpenGL_Journey\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj -MF CMakeFiles\OpenGL_Journey.dir\src\main.cpp.obj.d -o CMakeFiles\OpenGL_Journey.dir\src\main.cpp.obj -c C:\Users\Kaolin\Work\OpenGL_Journey\src\main.cpp
 
 CMakeFiles/OpenGL_Journey.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OpenGL_Journey.dir/src/main.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kaoli\Desktop\C++\OpenGL_Journey\src\main.cpp > CMakeFiles\OpenGL_Journey.dir\src\main.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Kaolin\Work\OpenGL_Journey\src\main.cpp > CMakeFiles\OpenGL_Journey.dir\src\main.cpp.i
 
 CMakeFiles/OpenGL_Journey.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenGL_Journey.dir/src/main.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kaoli\Desktop\C++\OpenGL_Journey\src\main.cpp -o CMakeFiles\OpenGL_Journey.dir\src\main.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Kaolin\Work\OpenGL_Journey\src\main.cpp -o CMakeFiles\OpenGL_Journey.dir\src\main.cpp.s
 
 # Object files for target OpenGL_Journey
 OpenGL_Journey_OBJECTS = \
 "CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj" \
 "CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj" \
+"CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.obj" \
 "CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj"
 
 # External object files for target OpenGL_Journey
@@ -127,12 +143,13 @@ OpenGL_Journey_EXTERNAL_OBJECTS =
 
 app.exe: CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj
 app.exe: CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj
+app.exe: CMakeFiles/OpenGL_Journey.dir/src/Window.cpp.obj
 app.exe: CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj
 app.exe: CMakeFiles/OpenGL_Journey.dir/build.make
 app.exe: CMakeFiles/OpenGL_Journey.dir/linkLibs.rsp
 app.exe: CMakeFiles/OpenGL_Journey.dir/objects1.rsp
 app.exe: CMakeFiles/OpenGL_Journey.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable app.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Kaolin\Work\OpenGL_Journey\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable app.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\OpenGL_Journey.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -144,6 +161,6 @@ CMakeFiles/OpenGL_Journey.dir/clean:
 .PHONY : CMakeFiles/OpenGL_Journey.dir/clean
 
 CMakeFiles/OpenGL_Journey.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\kaoli\Desktop\C++\OpenGL_Journey C:\Users\kaoli\Desktop\C++\OpenGL_Journey C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build C:\Users\kaoli\Desktop\C++\OpenGL_Journey\build\CMakeFiles\OpenGL_Journey.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Kaolin\Work\OpenGL_Journey C:\Users\Kaolin\Work\OpenGL_Journey C:\Users\Kaolin\Work\OpenGL_Journey\build C:\Users\Kaolin\Work\OpenGL_Journey\build C:\Users\Kaolin\Work\OpenGL_Journey\build\CMakeFiles\OpenGL_Journey.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/OpenGL_Journey.dir/depend
 

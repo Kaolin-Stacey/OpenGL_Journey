@@ -17,8 +17,6 @@
 			"link_directories",
 			"target_link_libraries",
 			"target_compile_options",
-			"add_definitions",
-			"target_compile_definitions",
 			"include_directories",
 			"target_include_directories"
 		],
@@ -34,7 +32,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 28,
+				"line" : 27,
 				"parent" : 0
 			},
 			{
@@ -46,7 +44,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 33,
+				"line" : 34,
 				"parent" : 0
 			},
 			{
@@ -58,25 +56,13 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 23,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 40,
-				"parent" : 0
-			},
-			{
-				"command" : 6,
-				"file" : 0,
-				"line" : 11,
-				"parent" : 0
-			},
-			{
-				"command" : 7,
-				"file" : 0,
-				"line" : 31,
+				"line" : 32,
 				"parent" : 0
 			}
 		]
@@ -87,45 +73,34 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++23"
+					"fragment" : "-g -std=gnu++20"
 				},
 				{
 					"backtrace" : 4,
 					"fragment" : "-g"
 				}
 			],
-			"defines" : 
-			[
-				{
-					"backtrace" : 5,
-					"define" : "SHADER_DIR=\"C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/shaders\""
-				},
-				{
-					"backtrace" : 6,
-					"define" : "SHADER_DIR=\"C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/shaders/\""
-				}
-			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 7,
-					"path" : "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/external/GLEW/include"
+					"backtrace" : 5,
+					"path" : "C:/Users/Kaolin/Work/OpenGL_Journey/external/GLEW/include"
 				},
 				{
-					"backtrace" : 7,
-					"path" : "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/external/GLFW/include"
+					"backtrace" : 5,
+					"path" : "C:/Users/Kaolin/Work/OpenGL_Journey/external/GLFW/include"
 				},
 				{
-					"backtrace" : 7,
-					"path" : "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/include"
+					"backtrace" : 5,
+					"path" : "C:/Users/Kaolin/Work/OpenGL_Journey/src/include"
 				},
 				{
-					"backtrace" : 8,
-					"path" : "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/external/GLM"
+					"backtrace" : 6,
+					"path" : "C:/Users/Kaolin/Work/OpenGL_Journey/external/GLM"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/kaoli/Desktop/C++/OpenGL_Journey"
+					"path" : "C:/Users/Kaolin/Work/OpenGL_Journey"
 				}
 			],
 			"language" : "CXX",
@@ -135,13 +110,14 @@
 				[
 					1
 				],
-				"standard" : "23"
+				"standard" : "20"
 			},
 			"sourceIndexes" : 
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -160,12 +136,12 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-LC:\\Users\\kaoli\\Desktop\\C++\\OpenGL_Journey\\external\\GLEW\\lib",
+				"fragment" : "-LC:\\Users\\Kaolin\\Work\\OpenGL_Journey\\external\\GLEW\\lib",
 				"role" : "libraryPath"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-LC:\\Users\\kaoli\\Desktop\\C++\\OpenGL_Journey\\external\\GLFW\\lib",
+				"fragment" : "-LC:\\Users\\Kaolin\\Work\\OpenGL_Journey\\external\\GLFW\\lib",
 				"role" : "libraryPath"
 			},
 			{
@@ -210,7 +186,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -226,6 +203,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/Shader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Window.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

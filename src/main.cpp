@@ -11,25 +11,19 @@
 #include <vector>
 #include "Mesh.h"
 #include "Shader.h"
+#include "Window.h"
 
-//window values
-constexpr GLint WIDTH = 800;
-constexpr GLint HEIGHT = 600;
-constexpr const char* TITLE = "App";
+Window mainWindow;
+
 
 constexpr float toRadians = 3.14159265f / 180.0f; // PI / 180
 
 std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
 
-std::string vShaderPath = std::string(SHADER_DIR) + "shader.vert";
-std::string fShaderPath = std::string(SHADER_DIR) + "shader.frag";
-
-// Vertex shader
-static const char* vShader = vShaderPath.c_str();
-
-// Fragment shader
-static const char* fShader = fShaderPath.c_str();
+GLfloat curAngle = 0.0f;
+static const char* vShader = "src/shaders/shader.vert";
+static const char* fShader = "src/shaders/shader.frag";
 
 
 // a redundant comment to tell you that this method is for creating an object
@@ -60,100 +54,55 @@ void CreateObjects() {
 
 void CreateShaders() {
     Shader *shader1 = new Shader();
-    shader1->CreateFromString(vShader, fShader);
+    shader1->CreateFromFiles(vShader, fShader);
     shaderList.push_back(*shader1);
 }
 
-int main() {
-    //initialise GLFW
-    if(!glfwInit()){
-        printf("GLFW initialisation failed!");
-        glfwTerminate();
-        return 1;
-    }
+int main() 
+{
+	mainWindow = Window(800, 600);
+	if(mainWindow.Initialise()==1){
+		return 1;
+	} 
 
+	CreateObjects();
+	CreateShaders();
 
-    //setup GLFW window properties
+	GLuint uniformProjection = 0, uniformModel = 0;
+	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (GLfloat)mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.0f);
 
-    //opengl version
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,3);
-    //core profile = no backwards compatibility, and allow forwards compatibility
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT,GL_TRUE);
+	// Loop until window closed
+	while (!mainWindow.getShouldClose())
+	{
+		// Get + Handle User Input
+		glfwPollEvents();
 
-    GLFWwindow *mainWindow = glfwCreateWindow(WIDTH, HEIGHT, TITLE, NULL, NULL);
-    if (!mainWindow) {
-        printf("GLFW window creation failed!");
-        glfwTerminate();
-        return 1;
-    }
+		// Clear the window
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    // get buffer size info
-    int bufferWidth, bufferHeight;
-    glfwGetFramebufferSize(mainWindow, &bufferWidth, &bufferHeight);
+		shaderList[0].UseShader();
+		uniformModel = shaderList[0].GetModelLocation();
+		uniformProjection = shaderList[0].GetProjectionLocation();
 
-    //set context for GLEW to use
-    glfwMakeContextCurrent(mainWindow);
+		glm::mat4 model(1.0f);	
 
-    // allow modern extension features
-    glewExperimental = GL_TRUE;
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, -2.5f));
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+		meshList[0]->RenderMesh();
 
-    if (glewInit() != GLEW_OK) {
-        printf("GLEW initialisation failed!");
-        glfwDestroyWindow(mainWindow);
-        glfwTerminate();
-        return 1;
-    }
+		model = glm::mat4(1.0f);
+		model = glm::translate(model, glm::vec3(0.0f, 1.0f, -2.5f));
+		model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[1]->RenderMesh();
 
-    printf("OpenGL Version: %s\n", glGetString(GL_VERSION));
-    printf("GLSL Version: %s\n", glGetString(GL_SHADING_LANGUAGE_VERSION));
+		glUseProgram(0);
 
-    const GLubyte* version = glGetString(GL_VERSION);
-    printf("OpenGL Version: %s\n", version);
+		mainWindow.swapBuffers();
+	}
 
-    glEnable(GL_DEPTH_TEST);
-
-    //setup viewport size
-    glViewport(0,0,bufferWidth,bufferHeight);
-
-    CreateObjects();
-    CreateShaders();
-
-    GLuint uniformProjection = 0, uniformModel = 0;
-
-    glm::mat4 projection = glm::perspective(45.0f, (GLfloat)bufferWidth / (GLfloat)bufferHeight, 0.1f, 100.0f);
-
-    // loop until window closed
-    while (!glfwWindowShouldClose(mainWindow)) {
-        // get and handle user input events
-        glfwPollEvents();
-
-        // clear window
-        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-        shaderList[0].UseShader();
-        uniformModel = shaderList[0].GetModelLocation();
-        uniformProjection = shaderList[0].GetProjectionLocation();
-
-        glm::mat4 model(1.0f);
-
-        model = glm::translate(model, glm::vec3(0.0f, 1.0f, -2.5f));
-        // model = glm::rotate(model, curAngle * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
-
-        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-        glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
-
-        meshList[0]->RenderMesh();
-
-        glUseProgram(0);
-
-        glfwSwapBuffers(mainWindow);
-    }
-
-    
-    return 0; 
+	return 0;
 }
-

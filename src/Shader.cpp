@@ -14,46 +14,29 @@ void Shader::CreateFromString(const char* vertexCode, const char* fragmentCode)
 
 void Shader::CreateFromFiles(const char* vertexLocation, const char* fragmentLocation)
 {
-	printf("Vertex Shader Path: %s\n", vertexLocation);
-	printf("Fragment Shader Path: %s\n", fragmentLocation);
 	std::string vertexString = ReadFile(vertexLocation);
 	std::string fragmentString = ReadFile(fragmentLocation);
 	const char* vertexCode = vertexString.c_str();
 	const char* fragmentCode = fragmentString.c_str();
-
-	printf("Vertex Shader Code:\n%s\n", vertexCode);
-	printf("Fragment Shader Code:\n%s\n", fragmentCode);
 
 	CompileShader(vertexCode, fragmentCode);
 }
 
 std::string Shader::ReadFile(const char* fileLocation)
 {
-	std::string content;
-	std::ifstream fileStream(fileLocation, std::ios::in);
+	std::ifstream fileStream(fileLocation);
 
-	if (!fileStream.is_open()) {
+	if(!fileStream.is_open()) {
 		printf("Failed to read %s! File doesn't exist.", fileLocation);
 		return "";
 	}
-
-	std::string line = "";
-	while (!fileStream.eof())
-	{
-		std::getline(fileStream, line);
-		content.append(line + "\n");
-	}
-
-	printf("Shader file content (%s):\n%s\n", fileLocation, content.c_str());
-
-	fileStream.close();
-	return content;
+	std::ostringstream contentStream;
+	contentStream << fileStream.rdbuf();
+	return contentStream.str();
 }
 
 void Shader::CompileShader(const char* vertexCode, const char* fragmentCode)
 {
-    printf("Vertex Shader Code:\n%s\n", vertexCode);
-    printf("Fragment Shader Code:\n%s\n", fragmentCode);
     
     shaderID = glCreateProgram();
     if (!shaderID)
@@ -71,7 +54,6 @@ void Shader::CompileShader(const char* vertexCode, const char* fragmentCode)
 	glGetProgramiv(shaderID, GL_LINK_STATUS, &result);
 	if (!result) {
 		glGetProgramInfoLog(shaderID, sizeof(eLog), NULL, eLog);
-		printf("Error linking program:\n%s\n", eLog);
 		printf("Error linking program:\n%s\n", eLog);
 		printf("Shader Program ID: %d\n", shaderID);
 		return;
