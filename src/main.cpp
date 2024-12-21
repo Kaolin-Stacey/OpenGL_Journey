@@ -1,10 +1,5 @@
-#include <stdio.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <string>
-#include <string.h>
-#include <stdlib.h>
-#include <cmath>
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
@@ -22,8 +17,11 @@ std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
 
 GLfloat curAngle = 0.0f;
-static const char* vShader = "src/shaders/shader.vert";
-static const char* fShader = "src/shaders/shader.frag";
+static const std::string vShaderPath = std::string(SHADER_DIR) + "/shader.vert";
+static const std::string fShaderPath = std::string(SHADER_DIR) + "/shader.frag";
+
+static const char* vShader = vShaderPath.c_str();
+static const char* fShader = fShaderPath.c_str();
 
 
 // a redundant comment to tell you that this method is for creating an object

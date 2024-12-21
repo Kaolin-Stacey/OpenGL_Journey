@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED On)
 set(CMAKE_C_COMPILER gcc)
 set(CMAKE_CXX_COMPILER g++)
 
+set(SHADER_DIR "${CMAKE_SOURCE_DIR}/src/shaders")
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/external/GLEW/include
@@ -27,6 +28,7 @@ file(GLOB SOURCES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 add_executable(OpenGL_Journey 
     ${SOURCES}
 )
+add_compile_definitions(SHADER_DIR="${SHADER_DIR}")
 set_target_properties(OpenGL_Journey PROPERTIES OUTPUT_NAME "app")
 
 target_include_directories(OpenGL_Journey PRIVATE ${CMAKE_SOURCE_DIR}/external/GLM ${CMAKE_SOURCE_DIR}/src/include)
