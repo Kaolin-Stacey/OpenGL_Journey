@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj"
+  "CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj.d"
+  "CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj"
+  "CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj.d"
   "CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj"
   "CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj.d"
   "app.exe"

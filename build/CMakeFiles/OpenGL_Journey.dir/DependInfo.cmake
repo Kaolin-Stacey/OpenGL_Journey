@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/Mesh.cpp" "CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj" "gcc" "CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj.d"
+  "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/Shader.cpp" "CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj" "gcc" "CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj.d"
   "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/main.cpp" "CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj" "gcc" "CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj.d"
   )
 

@@ -1,1 +1,1 @@
--IC:/Users/kaoli/Desktop/C++/OpenGL_Journey/external/GLEW/include -IC:/Users/kaoli/Desktop/C++/OpenGL_Journey/external/GLFW/include -IC:/Users/kaoli/Desktop/C++/OpenGL_Journey/external/GLM -IC:/Users/kaoli/Desktop/C++/OpenGL_Journey
+-IC:/Users/kaoli/Desktop/C++/OpenGL_Journey/external/GLEW/include -IC:/Users/kaoli/Desktop/C++/OpenGL_Journey/external/GLFW/include -IC:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/include -IC:/Users/kaoli/Desktop/C++/OpenGL_Journey/external/GLM -IC:/Users/kaoli/Desktop/C++/OpenGL_Journey

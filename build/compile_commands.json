@@ -1,7 +1,19 @@
 [
 {
   "directory": "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/OpenGL_Journey.dir/includes_CXX.rsp -g -std=gnu++23 -g -o CMakeFiles\\OpenGL_Journey.dir\\src\\main.cpp.obj -c C:\\Users\\kaoli\\Desktop\\C++\\OpenGL_Journey\\src\\main.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DSHADER_DIR=\\\"C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/shaders\\\" -DSHADER_DIR=\\\"C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/shaders/\\\" @CMakeFiles/OpenGL_Journey.dir/includes_CXX.rsp -g -std=gnu++23 -g -o CMakeFiles\\OpenGL_Journey.dir\\src\\Mesh.cpp.obj -c C:\\Users\\kaoli\\Desktop\\C++\\OpenGL_Journey\\src\\Mesh.cpp",
+  "file": "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/Mesh.cpp",
+  "output": "CMakeFiles/OpenGL_Journey.dir/src/Mesh.cpp.obj"
+},
+{
+  "directory": "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DSHADER_DIR=\\\"C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/shaders\\\" -DSHADER_DIR=\\\"C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/shaders/\\\" @CMakeFiles/OpenGL_Journey.dir/includes_CXX.rsp -g -std=gnu++23 -g -o CMakeFiles\\OpenGL_Journey.dir\\src\\Shader.cpp.obj -c C:\\Users\\kaoli\\Desktop\\C++\\OpenGL_Journey\\src\\Shader.cpp",
+  "file": "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/Shader.cpp",
+  "output": "CMakeFiles/OpenGL_Journey.dir/src/Shader.cpp.obj"
+},
+{
+  "directory": "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DSHADER_DIR=\\\"C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/shaders\\\" -DSHADER_DIR=\\\"C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/shaders/\\\" @CMakeFiles/OpenGL_Journey.dir/includes_CXX.rsp -g -std=gnu++23 -g -o CMakeFiles\\OpenGL_Journey.dir\\src\\main.cpp.obj -c C:\\Users\\kaoli\\Desktop\\C++\\OpenGL_Journey\\src\\main.cpp",
   "file": "C:/Users/kaoli/Desktop/C++/OpenGL_Journey/src/main.cpp",
   "output": "CMakeFiles/OpenGL_Journey.dir/src/main.cpp.obj"
 }

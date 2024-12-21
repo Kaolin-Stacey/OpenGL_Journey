@@ -2,11 +2,13 @@
     "configurations": [
         {
             "name": "Win32",
+            
             "includePath": [
                 "${workspaceFolder}/src",
                 "${workspaceFolder}/external/GLEW/include",
                 "${workspaceFolder}/external/GLFW/include",
-                "${workspaceFolder}/external/GLM"
+                "${workspaceFolder}/external/GLM",
+                "${workspaceFolder}/src/include"
             ],
             "defines": [
                 "_DEBUG",
