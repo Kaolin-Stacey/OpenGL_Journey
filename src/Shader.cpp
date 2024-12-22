@@ -69,7 +69,8 @@ void Shader::CompileShader(const char* vertexCode, const char* fragmentCode)
     }
 
     uniformProjection = glGetUniformLocation(shaderID, "projection");
-    uniformModel = glGetUniformLocation(shaderID, "model");
+	uniformModel = glGetUniformLocation(shaderID, "model");
+	uniformView = glGetUniformLocation(shaderID, "view");
 
     if (uniformProjection == -1 || uniformModel == -1) {
         printf("Error: Couldn't find uniform locations for projection and/or model.\n");
@@ -84,6 +85,10 @@ GLuint Shader::GetProjectionLocation()
 GLuint Shader::GetModelLocation()
 {
 	return uniformModel;
+}
+
+GLuint Shader::GetViewLocation() {
+	return uniformView;
 }
 
 void Shader::UseShader()

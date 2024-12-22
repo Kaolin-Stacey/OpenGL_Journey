@@ -27,6 +27,8 @@ file(GLOB SOURCES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 
 add_executable(OpenGL_Journey 
     ${SOURCES}
+        src/Camera.cpp
+        src/include/Camera.h
 )
 add_compile_definitions(SHADER_DIR="${SHADER_DIR}")
 set_target_properties(OpenGL_Journey PROPERTIES OUTPUT_NAME "app")
