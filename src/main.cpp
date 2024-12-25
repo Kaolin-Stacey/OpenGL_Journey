@@ -11,6 +11,7 @@
 #include "Window.h"
 #include "Camera.h"
 #include "Texture.h"
+#include "Light.h"
 
 Window mainWindow;
 
@@ -23,6 +24,8 @@ Camera camera;
 
 Texture brickTexture;
 Texture dirtTexture;
+
+Light mainLight;
 
 GLfloat curAngle = 0.0f;
 static const std::string vShaderPath = std::string(SHADER_DIR) + "/shader.vert";
@@ -88,7 +91,9 @@ int main()
 	dirtTexture = Texture(dirt);
 	dirtTexture.LoadTexture();
 
-	GLuint uniformProjection = 0, uniformModel = 0, uniformView = 0;
+	mainLight = Light(1.0f, 1.0f, 1.0f, 1.0f);
+
+	GLuint uniformProjection = 0, uniformModel = 0, uniformView = 0, uniformAmbientIntensity = 0, uniformAmbientColor = 0;
 	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (GLfloat)mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.0f);
 
 	// Loop until window closed
@@ -101,13 +106,17 @@ int main()
 		camera.mouseControl(mainWindow.getXChange(),mainWindow.getYChange());
 
 		// Clear the window
-		glClearColor(0.1f, 0.0f, 0.0f, 1.0f);
+		glClearColor(0.529f, 0.808f, 0.922f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		shaderList[0].UseShader();
 		uniformModel = shaderList[0].GetModelLocation();
 		uniformProjection = shaderList[0].GetProjectionLocation();
 		uniformView = shaderList[0].GetViewLocation();
+		uniformAmbientColor = shaderList[0].GetAmbientColorLocation();
+		uniformAmbientIntensity = shaderList[0].GetAmbientIntensityLocation();
+
+		mainLight.UseLight(uniformAmbientIntensity, uniformAmbientColor);
 
 		glm::mat4 model(1.0f);	
 

@@ -71,10 +71,16 @@ void Shader::CompileShader(const char* vertexCode, const char* fragmentCode)
     uniformProjection = glGetUniformLocation(shaderID, "projection");
 	uniformModel = glGetUniformLocation(shaderID, "model");
 	uniformView = glGetUniformLocation(shaderID, "view");
+	uniformAmbientColor = glGetUniformLocation(shaderID, "directionalLight.color");
+	uniformAmbientIntensity = glGetUniformLocation(shaderID, "directionalLight.ambientIntensity");
 
     if (uniformProjection == -1 || uniformModel == -1) {
         printf("Error: Couldn't find uniform locations for projection and/or model.\n");
     }
+
+	if (uniformAmbientColor ==-1 || uniformAmbientIntensity == -1) {
+		printf("Error: Couldn't find uniform locations for ambient color and/or intensity.\n");
+	}
 }
 
 
@@ -89,6 +95,14 @@ GLuint Shader::GetModelLocation()
 
 GLuint Shader::GetViewLocation() {
 	return uniformView;
+}
+
+GLuint Shader::GetAmbientIntensityLocation() {
+	return uniformAmbientIntensity;
+}
+
+GLuint Shader::GetAmbientColorLocation() {
+	return uniformAmbientColor;
 }
 
 void Shader::UseShader()
