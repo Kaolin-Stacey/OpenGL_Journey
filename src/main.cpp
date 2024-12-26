@@ -35,7 +35,7 @@ static const char* vShader = vShaderPath.c_str();
 static const char* fShader = fShaderPath.c_str();
 
 static const std::string dirtPath = std::string(ASSETS_DIR) + "/textures/dirt.png";
-static const std::string brickPath = std::string(ASSETS_DIR) + "/textures/bricks.png";
+static const std::string brickPath = std::string(ASSETS_DIR) + "/textures/bricks.jpg";
 
 static const char* dirt = dirtPath.c_str();
 static const char* brick = brickPath.c_str();
@@ -91,7 +91,7 @@ int main()
 	dirtTexture = Texture(dirt);
 	dirtTexture.LoadTexture();
 
-	mainLight = Light(1.0f, 1.0f, 1.0f, 1.0f);
+	mainLight = Light();
 
 	GLuint uniformProjection = 0, uniformModel = 0, uniformView = 0, uniformAmbientIntensity = 0, uniformAmbientColor = 0;
 	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (GLfloat)mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.0f);
