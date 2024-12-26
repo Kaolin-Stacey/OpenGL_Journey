@@ -1,10 +1,3 @@
-.cmake
-CMakeFiles
-external
-Testing
-.ninja_deps
-.ninja_log
-build.ninja
-cmake_install.cmake
-CMakeCache.txt
-app.exe
+*
+!.gitignore
+!*.dll
